@@ -21,7 +21,6 @@ void GivePistolDuelWeapons(int client)
 		RemovePlayerItem(client, weapon);
 		RemoveEdict(weapon);
 	}
-	GivePlayerItem(client, "weapon_awp");
 	
 	int weapon2 = GetPlayerWeaponSlot(client, CS_SLOT_SECONDARY);
 	if(weapon2 > 0 && IsValidEntity(weapon2)) {
