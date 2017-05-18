@@ -22,6 +22,16 @@
 		"en"		"Kill sound: Off"
 	}
 	
+	"Pistol Duels: On"
+	{
+		"en"		"Pistol Duels: On"
+	}
+	
+	"Pistol Duels: Off"
+	{
+		"en"		"Pistol Duels: Off"
+	}
+	
 	"AWP Duels: On"
 	{
 		"en"		"AWP Duels: On"

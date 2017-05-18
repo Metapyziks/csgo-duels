@@ -129,6 +129,15 @@ void ShowMainMenu(int client)
 	//But for now manual AWP DUEL added
 	//because Im too lazy to create natives
 	
+	if(g_PistolDuelsCvar.IntValue == 1)
+	{
+		if(b_PistolDuelEnabled[client])
+			Format(AddItemChar, 50, "%T","Pistol Duels: On",client);
+		else
+			Format(AddItemChar, 50, "%T","Pistol Duels: Off",client);
+		menu.AddItem("PistolDuel", AddItemChar);
+	}
+
 	if(g_AWPDuelsCvar.IntValue == 1)
 	{
 		if(b_AwpDuelEnabled[client])
@@ -173,6 +182,9 @@ public int MenuHandlers_MainMenu(Menu menu, MenuAction action, int client, int i
 					
 				else if(StrEqual(info, "ChangeSound"))
 					ChangeClientSound(client);
+					
+				else if(StrEqual(info, "PistolDuel"))
+					ChangePistolDuel(client);
 					
 				else if(StrEqual(info, "AWPDuel"))
 					ChangeAWPDuel(client);

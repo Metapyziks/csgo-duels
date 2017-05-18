@@ -291,6 +291,10 @@ void SetupMatch(int client, int enemy)
 			//Count how many custom duels are enabled
 			int customDuels 	= 0;
 			ArrayList customDuelsArray = new ArrayList();
+			if(b_PistolDuelEnabled[client] && b_PistolDuelEnabled[enemy] && g_PistolDuelsCvar.IntValue == 1){
+				customDuels++;
+				customDuelsArray.PushString("pistolDuel");
+			}
 			if(b_AwpDuelEnabled[client] && b_AwpDuelEnabled[enemy] && g_AWPDuelsCvar.IntValue == 1){
 				customDuels++;
 				customDuelsArray.PushString("awpDuel");
@@ -307,8 +311,17 @@ void SetupMatch(int client, int enemy)
 				int randomDuel = GetRandomInt(0, customDuelsArray.Length - 1);
 				char randomNames[50];
 				customDuelsArray.GetString(randomDuel, randomNames, sizeof(randomNames));
+				//Pistol duel setup
+				if(StrEqual(randomNames, "pis")){
+					g_CustomRoundName[client] = "Pistol Duel";
+					g_CustomRoundName[enemy] = "Pistol Duel";
+					SetupPlayer(client, enemy, arena, CS_TEAM_T, false);
+					SetupPlayer(enemy, client, arena, CS_TEAM_CT, false);	
+					GivePistolDuelWeapons(client);
+					GivePistolDuelWeapons(enemy);
+				}
 				//AWP duel setup
-				if(StrEqual(randomNames, "awp")){
+				else if(StrEqual(randomNames, "awp")){
 					g_CustomRoundName[client] = "AWP Duel";
 					g_CustomRoundName[enemy] = "AWP Duel";
 					SetupPlayer(client, enemy, arena, CS_TEAM_T, false);

@@ -53,8 +53,10 @@ bool b_ClientSoundEnabled[MAXPLAYERS + 1];
 Handle g_Rifle;
 Handle g_Pistol;
 
+Handle g_PistolDuel;
 Handle g_AWPDuel;
 Handle g_FlashbangDuel;
+bool b_PistolDuelEnabled[MAXPLAYERS + 1];
 bool b_AwpDuelEnabled[MAXPLAYERS + 1];
 bool b_FlashbangDuelEnabled[MAXPLAYERS + 1];
 bool b_HideMainWeaponMenu[MAXPLAYERS + 1];
@@ -74,6 +76,7 @@ ConVar g_EnablePistolsCvar;
 ConVar g_GiveArmorCvar;
 ConVar g_GiveHelmetCvar;
 ConVar g_WeaponMenuJoinCvar;
+ConVar g_PistolDuelsCvar;
 ConVar g_AWPDuelsCvar;
 ConVar g_FlashbangDuelsCvar;
 ConVar g_DuelDelayCvar;

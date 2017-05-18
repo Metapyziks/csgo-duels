@@ -22,9 +22,19 @@
 		"chi"		"击杀音效: 关闭"
 	}
 	
+	"Pistol Duels: On"
+	{
+		"chi"		"Pistol 决斗: 开启"
+	}
+	
+	"Pistol Duels: Off"
+	{
+		"chi"		"Pistol 决斗: 关闭"
+	}
+	
 	"AWP Duels: On"
 	{
-		"chi"		"AWP决斗: 开启"
+		"chi"		"AWP 决斗: 开启"
 	}
 	
 	"AWP Duels: Off"

@@ -8,6 +8,7 @@ void Configs_OnPluginStartFunc()
 	g_GiveArmorCvar 		= CreateConVar("sm_give_armor", 			"1", 							"Give armor to player when new duel starts", 0, true, 0.0, true, 1.0);
 	g_GiveHelmetCvar 		= CreateConVar("sm_give_helmet", 			"1", 							"Give helmet to player when new duel starts", 0, true, 0.0, true, 1.0);
 	g_WeaponMenuJoinCvar 	= CreateConVar("sm_weapon_menu_on_join",	"0", 							"Open weapon menu (default menu) when player joins the server", 0, true, 0.0, true, 1.0);
+	g_PistolDuelsCvar		= CreateConVar("sm_enable_pistol_duels",	"1", 							"Enable pistol duels option", 0, true, 0.0, true, 1.0);
 	g_AWPDuelsCvar 			= CreateConVar("sm_enable_awp_duels",		"1", 							"Enable AWP duels option", 0, true, 0.0, true, 1.0);
 	g_DuelDelayCvar 		= CreateConVar("sm_duel_delay",				"1.4", 							"How long it will wait to find a new enemy (longer time means winner will stay longer in arena after duel win, but there will be bigger possibility to get different opponent)", 0, true, 0.3, true, 5.0);
 	g_NoDamageCvar 			= CreateConVar("sm_nodamage_new_enemy", 	"25.0", 						"How long it will take when there is no damage in duel, to find a new duel for both enemies", 0, true, 0.0, true, 60.0);

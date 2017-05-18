@@ -25,6 +25,7 @@
 #include "1v1dm/1v1_PlayerFirstJoin.sp"
 #include "1v1dm/1v1_HideBlood.sp"
 #include "1v1dm/1v1_KillSound.sp"
+#include "1v1dm/1v1_PistolDuel.sp"
 #include "1v1dm/1v1_AWPDuel.sp"
 #include "1v1dm/1v1_KillFeed.sp"
 #include "1v1dm/1v1_ShowDamage.sp"
