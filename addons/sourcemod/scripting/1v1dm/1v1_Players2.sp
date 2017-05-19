@@ -158,6 +158,8 @@ void TeleportToLobby(int client, bool searchEnable, bool ImSearching = false)
 			i_PlayerArena[client] 		= LOBBY;
 			i_PlayerEnemy[client] 		= -1;
 			
+			GivePlayerHisWeapons(client);
+			
 			//Make 
 			SetEntData(client, g_offsCollisionGroup, 2, 4, true);
 			
