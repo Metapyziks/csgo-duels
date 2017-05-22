@@ -138,6 +138,15 @@ void ShowMainMenu(int client)
 		menu.AddItem("PistolDuel", AddItemChar);
 	}
 
+	if(g_DeagleDuelsCvar.IntValue == 1)
+	{
+		if(b_DeagleDuelEnabled[client])
+			Format(AddItemChar, 50, "%T","Deagle Duels: On",client);
+		else
+			Format(AddItemChar, 50, "%T","Deagle Duels: Off",client);
+		menu.AddItem("DeagleDuel", AddItemChar);
+	}
+
 	if(g_AWPDuelsCvar.IntValue == 1)
 	{
 		if(b_AwpDuelEnabled[client])
@@ -186,6 +195,9 @@ public int MenuHandlers_MainMenu(Menu menu, MenuAction action, int client, int i
 				else if(StrEqual(info, "PistolDuel"))
 					ChangePistolDuel(client);
 					
+				else if(StrEqual(info, "DeagleDuel"))
+					ChangeDeagleDuel(client);
+
 				else if(StrEqual(info, "AWPDuel"))
 					ChangeAWPDuel(client);
 					

@@ -299,6 +299,10 @@ void SetupMatch(int client, int enemy)
 				customDuels++;
 				customDuelsArray.PushString("pistolDuel");
 			}
+			if(b_DeagleDuelEnabled[client] && b_DeagleDuelEnabled[enemy] && g_PistolDuelsCvar.IntValue == 1){
+				customDuels++;
+				customDuelsArray.PushString("deagleDuel");
+			}
 			if(b_AwpDuelEnabled[client] && b_AwpDuelEnabled[enemy] && g_AWPDuelsCvar.IntValue == 1){
 				customDuels++;
 				customDuelsArray.PushString("awpDuel");
@@ -323,6 +327,15 @@ void SetupMatch(int client, int enemy)
 					SetupPlayer(enemy, client, arena, CS_TEAM_CT, false);	
 					GivePistolDuelWeapons(client);
 					GivePistolDuelWeapons(enemy);
+				}
+				//Deagle duel setup
+				else if(StrEqual(randomNames, "dea")){
+					g_CustomRoundName[client] = "Deagle Duel";
+					g_CustomRoundName[enemy] = "Deagle Duel";
+					SetupPlayer(client, enemy, arena, CS_TEAM_T, false);
+					SetupPlayer(enemy, client, arena, CS_TEAM_CT, false);	
+					GiveDeagleDuelWeapons(client);
+					GiveDeagleDuelWeapons(enemy);
 				}
 				//AWP duel setup
 				else if(StrEqual(randomNames, "awp")){

@@ -32,6 +32,16 @@
 		"en"		"Pistol Duels: Off"
 	}
 	
+	"Deagle Duels: On"
+	{
+		"en"		"Deagle Duels: On"
+	}
+	
+	"Deagle Duels: Off"
+	{
+		"en"		"Deagle Duels: Off"
+	}
+
 	"AWP Duels: On"
 	{
 		"en"		"AWP Duels: On"

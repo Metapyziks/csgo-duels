@@ -31,6 +31,16 @@
 	{
 		"chi"		"Pistol 决斗: 关闭"
 	}
+
+	"Deagle Duels: On"
+	{
+		"chi"		"Deagle 决斗: 开启"
+	}
+	
+	"Deagle Duels: Off"
+	{
+		"chi"		"Deagle 决斗: 关闭"
+	}
 	
 	"AWP Duels: On"
 	{
