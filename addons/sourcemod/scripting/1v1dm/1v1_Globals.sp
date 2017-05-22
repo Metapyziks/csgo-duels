@@ -45,6 +45,7 @@ int LOBBY = 1;
 
 Handle ArenaDamageTmr[64];
 Handle SearchTmr[MAXPLAYERS + 1] = {null, ...};
+//Handle ImmediateAttackTmr[MAXPLAYERS + 1] = {null, ...};
 
 //Cookies
 Handle g_SoundEnabled;

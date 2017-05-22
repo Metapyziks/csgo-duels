@@ -162,6 +162,8 @@ void TeleportToLobby(int client, bool searchEnable, bool ImSearching = false)
 			
 			//Make 
 			SetEntData(client, g_offsCollisionGroup, 2, 4, true);
+
+			AllowImmediateAttack(client);
 			
 			if(searchEnable)
 				b_WaitingForEnemy[client] = true;
@@ -350,6 +352,9 @@ void SetupMatch(int client, int enemy)
 				SetupPlayer(enemy, client, arena, CS_TEAM_CT);	
 			
 			}
+
+			AllowImmediateAttack(client);
+			AllowImmediateAttack(enemy);
 			
 			delete customDuelsArray;
 			
@@ -426,6 +431,32 @@ void SetupPlayer(int client, int opponent, int arena, int team, int giveWeapons 
 	}
 }
 
+void AllowImmediateAttack(int client)
+{
+/*
+	if (ImmediateAttackTmr[client] != null) return;
+	ImmediateAttackTmr[client] = CreateTimer(0.1, AllowImmediateAttackTimer, client);
+*/
+}
+
+/*
+public Action AllowImmediateAttackTimer(Handle timer, any client)
+{
+	int weapon = GetEntPropEnt(client, Prop_Send, "m_hActiveWeapon"); 
+	if (!IsValidEntity(weapon)) return;
+
+	SetEntPropFloat(weapon, Prop_Send, "m_flNextPrimaryAttack", GetGameTime());
+	SetEntPropFloat(weapon, Prop_Send, "m_flNextSecondaryAttack", GetGameTime());
+
+	PrintToChat(client, "AllowImmediateAttackTimer");
+
+	if (ImmediateAttackTmr[client] != null)
+	{
+		KillTimer(ImmediateAttackTmr[client]);
+		ImmediateAttackTmr[client] = null;
+	}
+}
+*/
 
 void TeleportToArena(int client, int team, int arena)
 {
